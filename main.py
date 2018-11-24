@@ -11,7 +11,7 @@ def parse():
     path = '//*[@id="streamTitle"]'
     currently_playing = tree.xpath(path+'/text()')
     currently_playing = currently_playing[0]
-    currently_playing = currently_playing.replace('Šiuo metu grojame:', '')
+    currently_playing = currently_playing.replace('Šiuo metu grojame: ', '')
     time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     return time, currently_playing
 
